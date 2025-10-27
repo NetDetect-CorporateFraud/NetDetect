@@ -1,0 +1,38 @@
+# data configuration
+data: 'CN'
+MAX_SEQ: '[0]'
+
+# model  initialization
+model: "NN" # MLP
+emb_init: 'Conven'
+path: 'total'
+
+use_rnn: true
+use_seq_pooling: true
+use_path_pooling: false
+use_conven_seq: true
+
+
+fraud_dim: 1
+hidden_size: 128
+use_noisy: 'None'
+noise_rate: 0.04
+print_param: false
+patience: 10
+
+# training settings
+lr: 0.00008
+num_heads: [1]
+dropout: 0.6
+weight_decay: 0.03
+num_epochs: 20
+threshold_logitdim: 0.48
+device: "cuda:1"
+fl_param: [4, 0.037]
+tvt_split: [2019,2020]
+lr_adjust: [1, 0.9]
+valid_epoch: 1
+seed: 2025
+log_dir: "../../output/{}/results/"
+
+Prob: false

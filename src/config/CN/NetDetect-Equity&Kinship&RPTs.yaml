@@ -1,0 +1,37 @@
+# data configuration
+data: 'CN'
+MAX_SEQ: '[]'
+
+# model  initialization
+model: "NetDetect"
+emb_init: 'Conven'
+path: 'Equity&Kinship&RPTs'
+
+use_rnn: True
+use_seq_pooling: True
+use_path_pooling: True
+use_conven_seq: True
+
+fraud_dim: 16
+hidden_size: 256
+use_noisy: 'reweight'
+noise_rate: 0.04
+print_param: False
+patience: 10
+
+# training settings
+lr: 0.00001
+num_heads: [4,4]
+dropout: 0.6
+weight_decay: 0.06
+num_epochs: 20
+threshold_logitdim: 0.48
+device: "cuda:1"
+fl_param: [4, 0.065]
+tvt_split: [2019,2020]
+lr_adjust: [1, 0.8]
+valid_epoch: 1
+seed: 2031
+log_dir: "../../output/{}/results/"
+
+Prob: false

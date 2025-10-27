@@ -1,0 +1,38 @@
+# data configuration
+data: 'CN'
+MAX_SEQ: '[0]'
+
+# model  initialization
+model: "NetDetect"
+emb_init: 'Conven'
+path: 'total'
+
+use_rnn: True
+use_seq_pooling: True
+use_path_pooling: True
+use_conven_seq: True
+
+
+fraud_dim: 1
+hidden_size: 256
+use_noisy: 'reweight'
+noise_rate: 0.04
+print_param: False
+patience: 10
+
+# training settings
+lr: 0.00002
+num_heads: [4]
+dropout: 0.6
+weight_decay: 0.05
+num_epochs: 25
+threshold_logitdim: 0.485
+device: "cuda:1"
+fl_param: [4, 0.038]
+tvt_split: [2019,2020]
+lr_adjust: [1, 0.9]
+valid_epoch: 1
+seed: 2031
+log_dir: "../../output/{}/results/"
+
+Prob: False

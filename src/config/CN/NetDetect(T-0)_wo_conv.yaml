@@ -1,0 +1,37 @@
+# data configuration
+data: 'CN'
+MAX_SEQ: '[0]'
+
+# model  initialization
+model: "NetDetect" # MLP
+emb_init: 'None'
+path: 'total'
+
+use_rnn: true
+use_seq_pooling: true
+use_path_pooling: false
+use_conven_seq: false
+
+fraud_dim: 1
+hidden_size: 64
+use_noisy: 'reweight'
+noise_rate: 0.04
+print_param: false
+patience: 10
+
+# training settings
+lr: 0.00008
+num_heads: [4,4]
+dropout: 0.7
+weight_decay: 0.08
+num_epochs: 20
+threshold_logitdim: 0.49
+device: "cuda:0"
+fl_param: [4, 0.052]
+tvt_split: [2019,2020]
+lr_adjust: [1, 0.8]
+valid_epoch: 1
+seed: 2026
+log_dir: "../../output/{}/results/"
+
+# Prob: false
