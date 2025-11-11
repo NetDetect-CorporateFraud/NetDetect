@@ -25,3 +25,4 @@ All code is provided in the source code package. The functionality of each file 
 -	utils.py: provides basic functions required for model training, such as generating masks, setting random seeds, and early stopping.
 -	the directory of "config": a set of .yaml files that define the parameter settings of all models for CN/US datasets
 
+This algorithm is being used for commercial applications. If needed, please contact me (ahduwei@ruc.edu.cn) to request it.
